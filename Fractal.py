@@ -23,8 +23,8 @@ angle = 30
 def y(sz, level):   
   
     if level > 0:
-        fractalMaker.colormode(255)
-          
+
+        trtl.colormode(255)
         # splitting the rgb range for green
         # into equal intervals for each level
         # setting the colour according
