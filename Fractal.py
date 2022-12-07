@@ -10,8 +10,16 @@ wn.setup(width=1.0, height=1.0)
 #functions
 #ask user for input
 ColorChoice = input("What color would you like? ")
-NumIterations = input(int("How many iterations would you like? "))
+NumIterations = int(input("How many iterations would you like? "))
 FranctalKind = input("What kind of Fractal? ")
+
+
+#variable stuff
+FractalMaker=trtl.Turtle()
+FractalMaker.pencolor(ColorChoice)
+
+
+
 
 #events
 wn.mainloop()
