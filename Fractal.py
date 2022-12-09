@@ -1,8 +1,16 @@
 #imports
 import turtle as trtl
 #Settings
+redColor=0
+greenColor=0
+blueColor=0
 colorChoice=input("what color?:")
-if colorChoice==
+if colorChoice=="red":
+    redColor=255
+elif colorChoice=="green":
+    greenColor=255
+else:
+    blueColor=255
 #setup
 wn=trtl.Screen()
 wn.setup(width=1.0, height=1.0)
@@ -31,7 +39,7 @@ def y(size, level):
         # into equal intervals for each level
         # setting the colour according
         # to the current level
-        fractalMaker.pencolor(0, 255//level, 0)
+        fractalMaker.pencolor(redColor//level, greenColor//level, blueColor//level)
           
         # drawing the base
         fractalMaker.fd(size)
@@ -50,7 +58,7 @@ def y(size, level):
         # the left subtree
         y(0.8 * size, level-1)
           
-        fractalMaker.pencolor(0//level*redColor, 255//level*greenColor, 0//(level*blueColor)
+        fractalMaker.pencolor(redColor//level, greenColor//level, blueColor//level)
 
         fractalMaker.right(angle)
         fractalMaker.forward(-size)
