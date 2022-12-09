@@ -4,7 +4,11 @@ import turtle as trtl
 redColor=0
 greenColor=0
 blueColor=0
+
+fractalChoice=input("What type of fractal would you like? (Tree, Spirograph,...")
+
 colorChoice=input("what color?:")
+
 if colorChoice=="red":
     redColor=255
 elif colorChoice=="green":
@@ -62,10 +66,49 @@ def y(size, level):
 
         fractalMaker.right(angle)
         fractalMaker.forward(-size)
+
            
 wn.tracer(False)          
 # tree is size 80 and level 7
 y(80, 10)
+
+
+
+
+#THE SPIROGRAPH
+
+color1 = "orange"
+color2 = "purple"
+
+
+
+
+
+wn.clearscreen()  
+painter.goto(0,0)
+space = 1
+
+angle = int(input("angle:"))
+ seg = int(360/angle)
+while painter.ycor() < height:
+  if painter.pencolor() == color2:
+    painter.fillcolor(color1)
+    painter.color(color1)
+  else:
+    painter.fillcolor(color2)
+    painter.color(color2)
+    painter.right(angle)
+    painter.forward(2 * space + 10) # experiment
+    painter.begin_fill()
+    painter.circle(3)
+    painter.end_fill()
+    space = space + 1
+
+
+
+
+
+
 
 #functions
 
