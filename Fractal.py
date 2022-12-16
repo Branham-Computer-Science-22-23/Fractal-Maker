@@ -22,7 +22,7 @@ fractalMaker.setheading(90)
 # the base and branch of the Y
 branchAngle = 30
   
-# function to plot a Y
+# function to plot a tree
 
 def treeDrawer(size, level):   
   
@@ -62,7 +62,7 @@ def treeDrawer(size, level):
 treeDrawer(80, 5)
 
 
-
+#draws spirograph
 def spirographDrawer(angle,color1,color2):
     fractalMaker.goto(0,0)
     space = 1
@@ -88,7 +88,7 @@ def spirographDrawer(angle,color1,color2):
 #functions
 treeIterations=5
 spiroAngle=180
-
+#adds more branches to tree
 def iterateTree():
     global treeIterations
     if treeIterations<11:
@@ -97,7 +97,7 @@ def iterateTree():
         fractalMaker.clear()
         treeIterations+=1
         treeDrawer(80,treeIterations)
-
+#chenges tree to red
 def redTree():
     global redColor, blueColor, greenColor
     fractalMaker.setheading(90)
@@ -107,7 +107,7 @@ def redTree():
     fractalMaker.goto(0,0)
     fractalMaker.clear()
     treeDrawer(80,treeIterations)
-
+#chenges tree to blue
 def blueTree():
     global redColor, blueColor, greenColor
     fractalMaker.setheading(90)
@@ -117,7 +117,7 @@ def blueTree():
     fractalMaker.goto(0,0)
     fractalMaker.clear()
     treeDrawer(80,treeIterations)
-
+#changes tree to green
 def greenTree():
     global redColor, blueColor, greenColor
     fractalMaker.setheading(90)
@@ -127,7 +127,7 @@ def greenTree():
     fractalMaker.goto(0,0)
     fractalMaker.clear()
     treeDrawer(80,treeIterations)
-
+#Rotates the spirograph
 def iterateSpirograph():
     global spiroAngle
     fractalMaker.setheading(90)
